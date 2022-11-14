@@ -1,0 +1,13 @@
+-
+  const pathStatics = PRODUCTION ? 'statics' : '/statics'
+
+  function staticImg (image) {
+    return `${pathStatics}/img/${image}`
+  }
+
+  function placeholder(width, height = width, x) {
+    if (x) {
+      return `https://via.placeholder.com/${width}x${height} 1x, https://via.placeholder.com/${Math.round(width * x)}x${Math.round(height * x)} ${x}x`
+    }
+    return `https://via.placeholder.com/${width}x${height}`
+  }

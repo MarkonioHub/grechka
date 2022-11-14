@@ -1,0 +1,23 @@
+.slider
+  img.slider__logo(src=staticImg('logo.svg'))
+  .slider__wrap.swiper
+    .slider__list.swiper-wrapper
+      // each item in [1,2,3]
+      //   .slider__item.swiper-slide
+      //     .slider__cont
+      //       .slider__title-box
+      //         h2.slider__title(title='The Razorite') The Razorite
+      //       p.slider__descr BMW i8 concept supported by Alpine Yokohama
+      //       .slider__like-wrap
+      //         button.slider__like-box(type='button' id='1')
+      //           .slider__like
+      //         .slider__like-line
+      //           .slider__like-name like:
+      //           .slider__like-value 330
+      //     img.slider__image(src=staticImg('placeholder.jpg'))
+      //     .slider__gradient
+    .slider__button.slider__button_prev
+    .slider__button.slider__button_next
+  .slider__social-list
+    each item in ['ok','vk','fb']
+      a.slider__social-item(class = `slider__social-item_${item}` href='#')

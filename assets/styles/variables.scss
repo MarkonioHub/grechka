@@ -1,0 +1,30 @@
+@mixin media($bp-size) {
+  @media (max-width: $bp-size + px) {
+    @content
+  }
+}
+
+@mixin media_min($bp-size) {
+  @media (min-width: $bp-size + 0.1 + px) {
+    @content
+  }
+}
+
+@mixin hover {
+  @include media_min(1022) {
+    @content
+  }
+}
+
+$imgPath: '/statics/img/';
+
+@mixin bgImg($img) {
+  background-image: url($imgPath + $img);
+}
+
+@mixin bgIcon($img, $w: 100%, $h: 100%) {
+  background-image: url($imgPath + $img);
+  background-size: $w $h;
+  background-repeat: no-repeat;
+  background-position: center center;
+}

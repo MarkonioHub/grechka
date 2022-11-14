@@ -1,0 +1,76 @@
+.pop-up {
+  background: #393939;
+  display: none;
+  padding: 25px 32px 32px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  max-width: 543px;
+  width: 100%;
+  max-height: 470px;
+  overflow: auto;
+  @include media(1124) {
+    padding: 16px 16px 32px;
+    max-height: 300px;
+  }
+}
+
+.pop-up_active {
+  display: block;
+}
+
+.pop-up__close {
+  @include bgIcon('ic_close_orange.svg');
+  width: 26px;
+  height: 25px;
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  cursor: pointer;
+  @include media(1124) {
+    top: 16px;
+    right: 16px;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.pop-up__title {
+  margin-bottom: 20px;
+  padding-right: 30px;
+  font-size: 32px;
+  line-height: 38px;
+  color: #727272;
+  font-weight: 700;
+  font-style: italic;
+  @include media(1124) {
+    font-size: 20px;
+    line-height: 23px;
+  }
+}
+
+.pop-up__text {
+  font-weight: 100;
+  color: white;
+  font-size: 20px;
+  line-height: 27px;
+  letter-spacing: -0.05em;
+}
+
+.pop-up__layer {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(black, .6);
+  cursor: pointer;
+}
+
+.pop-up__layer_active {
+  display: block;
+}
